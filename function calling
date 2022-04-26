@@ -1,0 +1,16 @@
+using System;
+namespace CSharp_Shell
+{
+  public class Program 
+    {  
+     void print()
+	{
+	Console.WriteLine("nikita");
+	}
+        public static void Main()
+        {
+	Program p=new Program();
+p.print();
+Console.ReadLine();
+        }    }
+}
