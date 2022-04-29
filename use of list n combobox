@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication11
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            if (comboBox1.SelectedItem == "india")
+            {
+                listBox1.Items.Add("maharashtra");
+                listBox1.Items.Add("goa");
+                listBox1.Items.Add("gujrat");
+            }
+            if (comboBox1.SelectedItem == "usa")
+            {
+                listBox1.Items.Add("london");
+                listBox1.Items.Add("washington");
+                
+            }
+           
+        }
+    }
+}
