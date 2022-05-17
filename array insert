@@ -1,0 +1,58 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+class insertion
+{
+	private: int a[5],ele,n,p;
+
+	public:
+		 void get();
+		 void insert();
+		 void disp();
+};
+void insertion:: get()
+{
+	cout<<"Enter The size of Array: ";
+	cin>>n;
+	cout<<"Enter The Elements of Array: ";
+	for(int i=0;i<n;i++)
+	{
+		cin>>a[i];
+	}
+	cout<<"Enter The element to be inserted: ";
+	cin>>ele;
+	cout<<"Enter the Position ( 0 to "<<n<<" ) ";
+	cin>>p;
+
+}
+void insertion:: insert()
+{
+	       if(p>n)
+	       {
+		cout<<p<<"is an invalid position ";
+		exit(0);
+	       }
+	       for(int i=n-1;i>=p;i++)
+		a[i+1]=a[i];
+		a[p]=ele;
+		n++;
+		cout<<ele<<" is Successfully inserted "<<endl;
+
+}
+void insertion:: disp()
+{
+	  cout<<"The array After insertion is ";
+	  for(int i=0;i<n;i++)
+	  {
+		cout<<a[i]<<endl;
+	  }
+}
+void main()
+{
+	clrscr();
+	insertion o;
+	o.get();
+	o.insert();
+	o.disp();
+	getch();
+}
